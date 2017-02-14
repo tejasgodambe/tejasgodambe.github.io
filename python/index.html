@@ -20,5 +20,8 @@ Actually, I lied; the truth is more complicated than that, because not all modul
 <li> %cpaste, %history </li>
 <p> Taken from <a href="https://docs.python.org/3/reference/datamodel.html">https://docs.python.org/3/reference/datamodel.html</a> </p>
 <li> __new__() creates an object and __init__() customizes the object </li>
-<li> del x doesn’t directly call x.__del__() — the former decrements the reference count for x by one, and the latter is only called when x‘s reference count reaches zero. </li> 
+<li> del x doesn’t directly call x.__del__() — the former decrements the reference count for x by one, and the latter is only called when x‘s reference count reaches zero. </li>
+
+<p> Taken from <a href="http://treyhunner.com/2016/12/python-iterator-protocol-how-for-loops-work/">http://treyhunner.com/2016/12/python-iterator-protocol-how-for-loops-work/</a> </p>
+<li> Lists, strings, and tuples are sequences. Dictionaries, sets, and many other iterables are not sequences. </li>
 </ul> 
