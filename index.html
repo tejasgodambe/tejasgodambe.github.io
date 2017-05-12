@@ -11,8 +11,6 @@ The inputs and outputs are one hot vectors. The number of i/p and o/p nodes is e
 
 <p> It turns out that the best initialization depends on the activation function (\tanh in our case) and one recommended approach is to initialize the weights randomly in the interval from \left[-\frac{1}{\sqrt{n}}, \frac{1}{\sqrt{n}}\right] where n is the number of incoming connections from the previous layer. </p> 
 
-<p> DNN maps one sample at a ti
-
 <p> Sigmoidal networks did not used to get trained without pre-training. But, ReLu and maxout networks generally don't require pre-training unless we have less training data. With less training data, maxout and ReLu will get trained but will not be able to achieve optimal numbers. Pre-training helps there. </p>  
 
 <h2> Bayesian inference </h2>
