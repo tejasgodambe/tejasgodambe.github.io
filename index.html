@@ -1,44 +1,96 @@
-<!DOCTYPE html>
 <html>
+
+<head>
+<title>Ganesh J</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
 <body>
+<h1>Ganesh J</h1>
+<p>Information Retrieval and Extraction Lab<br>
+IIIT Hyderabad</p>
+<p><a href="https://drive.google.com/open?id=0BxOp2aQOVTq5c1BJQmRTNzJ3ZFU">CV</a> | <a href="https://github.com/ganeshjawahar">Github</a> | <a href="https://scholar.google.co.in/citations?user=X7SMP1EAAAAJ&hl=en">Google-Scholar</a> | <a href="https://in.linkedin.com/in/ganesh-jawahar-ab928435">LinkedIn</a> | <a href="mailto:ganesh.j@research.iiit.ac.in" onmouseover="this.href=this.href.replace(/x/g,'');">Contact</a></p>
+<hr>
 
-<h1>Tejas Godambe</h1>
-<p> The goal of maintaining this webpage is to collect all <font color="red"> "small but important things (resources, understanding, etc.)"</font> at one place. </p> 
-
-<p> Taken from <a href="http://www.wildml.com/2015/09/recurrent-neural-networks-tutorial-part-2-implementing-a-language-model-rnn-with-python-numpy-and-theano/"> WildML</a></p> 
-<p> RNNLM is a generative model, i.e. it does not require output labels! 
-The inputs and outputs are one hot vectors. The number of i/p and o/p nodes is equal to vocab_size </p> 
-
-<p> It turns out that the best initialization depends on the activation function (\tanh in our case) and one recommended approach is to initialize the weights randomly in the interval from \left[-\frac{1}{\sqrt{n}}, \frac{1}{\sqrt{n}}\right] where n is the number of incoming connections from the previous layer. </p> 
-
-<p> Sigmoidal networks did not used to get trained without pre-training. But, ReLu and maxout networks generally don't require pre-training unless we have less training data. With less training data, maxout and ReLu will get trained but will not be able to achieve optimal numbers. Pre-training helps there. </p>  
-
-<h2> Bayesian inference </h2>
-<p> <a href="http://www.kdnuggets.com/2016/12/bayesian-basics-explained.html"> Kaggle link </a> </p>
-Bayesian statistics uses the mathematical rules of probability to <b> combines data with “prior information” </b> to give inferences which (if the model being used is correct) are more precise than would be obtained by either source of information alone. </p>
-
-<p>
-The essence of Bayesian statistics is the combination of information from multiple sources.  We call this data and prior information, or hierarchical modeling, or dynamic updating, or partial pooling, but in any case it’s all about putting together data to understand a larger structure. </p>
-
-<h2> TDNN </h2>
-<p>
-A very concise and quick to understand explanation of TDNNs can be found in page 2, para 2 of <a href=https://clgiles.ist.psu.edu/papers/IEEE.TNN.tdnn.as.fsm.pdf"> Link </a>
+<p>I am a third year MS student at the Information Retrieval and Extraction Laboratory at IIIT-H. My advisers are Professor <a href="https://faculty.iiit.ac.in/~vv/Home.html">Vasudeva Varma</a> and Professor <a href="https://www.microsoft.com/en-us/research/people/gmanish/">Manish Gupta</a>. In 2013 I graduated from <a href="http://www.mitindia.edu/en/">MIT Chennai</a> with a Bachelor in Computer Science and Engineering. Prior to joining IIIT-H I worked at <a href="http://company.monsterindia.com/hpin/">Hewlett Packard Imaging and Printing Group R&D</a> in Bangalore, India.
 </p>
 
-<h2> Vanishing gradient problem </h2>
-<p> A fantastic explanation of the vanishing gradient problem <a href="https://www.quora.com/What-is-the-vanishing-gradient-problem"> Link </a> </p>
+<h2>Published Papers</h2>
+<ol>
+    <li><i>Multi-part Representation Learning For Cross-domain Web Content Classification using Neural Networks</i>
+    (<a href="https://drive.google.com/open?id=0BxOp2aQOVTq5RGtPS1YxV1FLeDg">pdf</a>)<br>
+        Ganesh J, Himanshu Sharad Bhatt, Manjira Sinha, Shourya Roy<br>
+        <a href="https://ht.acm.org/ht2017/">The 28th ACM Conference on Hypertext and Social Media (HT)</a>, Jul 4-7, Prague, Czech Republic, 2017</li>
+        
+    <li><i>Improving Tweet Representations using Temporal and User Context</i>
+    (<a href="https://arxiv.org/abs/1612.06062">arxiv</a>, <a href="https://drive.google.com/open?id=0BxOp2aQOVTq5RXN6LTU3N3owQWc">pdf</a>, <a href="https://drive.google.com/open?id=0BxOp2aQOVTq5azNYXzJ3T3c3R2s">slides</a>, <a href="https://drive.google.com/open?id=0BxOp2aQOVTq5QV9OMDlvd3hKeDQ">poster</a>, <a href="https://drive.google.com/open?id=0BxOp2aQOVTq5Y2hTWFd6UnBLZmM">bibtex</a>, <a href="https://github.com/ganeshjawahar/tweet2vec">code</a>)<br>
+        Ganesh J, Manish Gupta, Vasudeva Varma<br>
+        <a href="http://ecir2017.org/">The 39th European Conf. on Information Retrieval (ECIR)</a>, Apr 9-13, Aberdeen, Scotland UK, 2017</li>
 
-<h2> Efficient Backprop </h2> 
-<p> Shifting and scaling is mean and covariance normalization. </p>
+    <li><i>Interpreting the Syntactic and Social Elements of the Tweet Representations via Elementary Property Prediction Tasks</i>
+    (<a href="https://arxiv.org/abs/1611.04887">arxiv</a>, <a href="https://drive.google.com/open?id=0BxOp2aQOVTq5Z2dXYm45OHZ5enc">pdf</a>, <a href="https://drive.google.com/open?id=0BxOp2aQOVTq5cmNLcExMQ3YwcHc">slides</a>, <a href="https://drive.google.com/open?id=0BxOp2aQOVTq5ODJiVUxMWGpJemM">poster</a>, <a href="https://drive.google.com/open?id=0BxOp2aQOVTq5ckpJVE5GM1RHeTA">bibtex</a>, <a href="https://github.com/ganeshjawahar/fine-tweet">code</a>)<br>
+        Ganesh J, Manish Gupta, Vasudeva Varma<br>
+        <a href="https://sites.google.com/site/nips2016interpretml/">NIPS Workshop on Interpretable Machine Learning in Complex Systems</a>, Dec 9, Barcelona, Spain, 2016</li>
+    
+    <li><i>Doc2Sent2Vec: A Novel Two-Phase Approach for Learning Document Representation</i>
+    (<a href="https://drive.google.com/open?id=0BxOp2aQOVTq5dkdobVd2cUVZYTA">pdf</a>, <a href="https://drive.google.com/open?id=0BxOp2aQOVTq5U0wyVGRXV2hER1E">slides</a>, <a href="https://drive.google.com/open?id=0BxOp2aQOVTq5aHZIU3FydWNockk">poster</a>, <a href="https://drive.google.com/open?id=0BxOp2aQOVTq5dHBSUjJxa2JjbHM">bibtex</a>, <a href="https://drive.google.com/open?id=0BxOp2aQOVTq5UVZraDc3RElvVU0">code</a>)<br>
+        Ganesh J, Manish Gupta, Vasudeva Varma<br>
+        <a href="http://sigir.org/sigir2016/">The 39th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR)</a>, Jul 17-21, Pisa, Italy, 2016</li>
 
-<h2> In ML, what is better: more data or better algorithms? </h2>
-<p> <a href="http://www.kdnuggets.com/2015/06/machine-learning-more-data-better-algorithms.html"> This article </a> sheds some light on some popular misquotes. </p> 
+    <li><i>Author2Vec: Learning Author Representations by Combining Content and Link Information</i>
+    (<a href="https://drive.google.com/open?id=0BxOp2aQOVTq5UnpPa0x0NUFnTFE">pdf</a>, <a href="https://drive.google.com/open?id=0BxOp2aQOVTq5N3J3eWE5VlRzX2s">slides</a>, <a href="https://drive.google.com/open?id=0BxOp2aQOVTq5U1BJbDRUOHRDbXc">poster</a>, <a href="https://drive.google.com/open?id=0BxOp2aQOVTq5VzNmR2F3R0QxMDg">bibtex</a>, <a href="https://github.com/ganeshjawahar/author2vec">code</a>)<br>
+        Ganesh J, Soumyajit Ganguly, Manish Gupta, Vasudeva Varma, Vikram Pudi<br>
+        <a href="http://www2016.ca/">The 25th International World Wide Web Conference (WWW)</a>, Apr 11-25, Montreal, Canada, 2016</li>
+</ol>
 
-<h2> Devil lies in the details </h2>
-<p> Again, I discovered many small but important points while reading research papers. I am logging them here so that I don't forget them. 
-They are in the image format with highlighted yellow. </p>  
+<h2>Preprints</h2>
+<ol>
+    <li><i>Improving Distributed Representations of Tweets - Present and Future</i> (2017)<br>
+        Ganesh J<br>
 
-<img src="img.PNG" alt="Mountain View" style="width:828px;height:202px;">
+    <li><i>Interpretation of Semantic Tweet Representations</i> (2017)
+    (<a href="https://arxiv.org/abs/1704.00898">arxiv</a>, <a href="https://drive.google.com/open?id=0BxOp2aQOVTq5TmduY3ZhZEpla28">pdf</a>, <a href="https://drive.google.com/open?id=0BxOp2aQOVTq5NUh5bHRpMjhYNms">bibtex</a>, <a href="https://github.com/ganeshjawahar/fine-tweet">code</a>)<br>
+        Ganesh J, Manish Gupta, Vasudeva Varma<br>
+
+    <li><i>Discovery and Interpretation of Embedding Models for Knowledge Representation</i> (Master's Thesis) (2016)
+    (<a href="https://drive.google.com/open?id=0BxOp2aQOVTq5MWQ5VlVtMXc0ekU">pdf</a>, <a href="https://drive.google.com/open?id=0BxOp2aQOVTq5N1NmSm9sT0RsajQ">slides</a>)<br>
+        Ganesh J<br>
+</ol>
+
+<h2>Softwares</h2>
+<ol>
+    <li><i>FastText</i>
+    (<a href="https://github.com/ganeshjawahar/fast_text">code</a>, <a href="https://code.facebook.com/posts/1438652669495149/fair-open-sources-fasttext/">reference</a>)<br>
+    </li>
+
+    <li><i>Aspect Based Sentiment Analysis using End-to-End Memory Networks</i>
+    (<a href="https://github.com/ganeshjawahar/mem_absa">code</a>, <a href="https://arxiv.org/abs/1605.08900">reference</a>)<br>
+    </li>
+
+    <li><i>Machine Reading and Comprehension Neural Models</i>
+    (<a href="https://github.com/ganeshjawahar/torch-teacher">code</a>, <a href="https://arxiv.org/abs/1506.03340">reference</a>)<br>
+    </li>
+
+    <li><i>Tweet Classification Models</i>
+    (<a href="https://github.com/ganeshjawahar/tweet-classify">code</a>)<br>
+    </li>
+
+    <li><i>Toy codes to kick-start deep learning for NLP</i>
+    (<a href="https://github.com/ganeshjawahar/dl4nlp-made-easy">code</a>)<br>
+    </li>
+
+    <li><i>Wikipedia Indexing and Search Engine</i>
+    (<a href="https://github.com/ganeshjawahar/ire-wiki-search">code</a>)<br>
+    </li>
+
+    <li><i>AWS-based Mobile Security Solution</i>
+    (<a href="https://github.com/ganeshjawahar/cloud-mobile-security">code</a>)<br>
+    </li>
+
+</ol>
+
+<a href="#top">Back to top</a>
 
 </body>
+
 </html>

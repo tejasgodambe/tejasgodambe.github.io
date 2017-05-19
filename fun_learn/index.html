@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Tejas Godambe</h1>
+<p> The goal of maintaining this webpage is to collect all <font color="red"> "small but important things (resources, understanding, etc.)"</font> at one place. </p> 
+
+<p> Taken from <a href="http://www.wildml.com/2015/09/recurrent-neural-networks-tutorial-part-2-implementing-a-language-model-rnn-with-python-numpy-and-theano/"> WildML</a></p> 
+<p> RNNLM is a generative model, i.e. it does not require output labels! 
+The inputs and outputs are one hot vectors. The number of i/p and o/p nodes is equal to vocab_size </p> 
+
+<p> It turns out that the best initialization depends on the activation function (\tanh in our case) and one recommended approach is to initialize the weights randomly in the interval from \left[-\frac{1}{\sqrt{n}}, \frac{1}{\sqrt{n}}\right] where n is the number of incoming connections from the previous layer. </p> 
+
+<p> Sigmoidal networks did not used to get trained without pre-training. But, ReLu and maxout networks generally don't require pre-training unless we have less training data. With less training data, maxout and ReLu will get trained but will not be able to achieve optimal numbers. Pre-training helps there. </p>  
+
+<h2> Bayesian inference </h2>
+<p> <a href="http://www.kdnuggets.com/2016/12/bayesian-basics-explained.html"> Kaggle link </a> </p>
+Bayesian statistics uses the mathematical rules of probability to <b> combines data with “prior information” </b> to give inferences which (if the model being used is correct) are more precise than would be obtained by either source of information alone. </p>
+
+<p>
+The essence of Bayesian statistics is the combination of information from multiple sources.  We call this data and prior information, or hierarchical modeling, or dynamic updating, or partial pooling, but in any case it’s all about putting together data to understand a larger structure. </p>
+
+<h2> TDNN </h2>
+<p>
+A very concise and quick to understand explanation of TDNNs can be found in page 2, para 2 of <a href=https://clgiles.ist.psu.edu/papers/IEEE.TNN.tdnn.as.fsm.pdf"> Link </a>
+</p>
+
+<h2> Vanishing gradient problem </h2>
+<p> A fantastic explanation of the vanishing gradient problem <a href="https://www.quora.com/What-is-the-vanishing-gradient-problem"> Link </a> </p>
+
+<h2> Efficient Backprop </h2> 
+<p> Shifting and scaling is mean and covariance normalization. </p>
+
+<h2> In ML, what is better: more data or better algorithms? </h2>
+<p> <a href="http://www.kdnuggets.com/2015/06/machine-learning-more-data-better-algorithms.html"> This article </a> sheds some light on some popular misquotes. </p> 
+
+<h2> Devil lies in the details </h2>
+<p> Again, I discovered many small but important points while reading research papers. I am logging them here so that I don't forget them. 
+They are in the image format with highlighted yellow. </p>  
+
+<img src="img.PNG" alt="Mountain View" style="width:828px;height:202px;">
+
+</body>
+</html>
