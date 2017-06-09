@@ -40,6 +40,7 @@ Actually, I lied; the truth is more complicated than that, because not all modul
 <li> Observe that a generator object is generated once, but its code is not run all at once. Only calls to next actually execute (part of) the code. Execution of the code in a generator stops once a yield statement has been reached, upon which it returns a value. The next call to next then causes execution to continue in the state in which the generator was left after the last yield. This is a fundamental difference with regular functions: those always start execution at the "top" and discard their state upon returning a value. </li>
 For first next(), execution starts at the top and continues till first yield statement is found. On second next(), the function code is not executed from the start but from the next statement after first yield all the way till the second yield statement. 
 
+<p> 
 def myGen(n): <br>
     yield n <br>
     print ('Hi') <br>
@@ -51,6 +52,7 @@ next(g) <br>
 next(g) <br>
  --Hi <br>
  --7 <br>
+</p> 
 
 <p> Taken from <a href="http://www.jesshamrick.com/2011/05/18/an-introduction-to-classes-and-inheritance-in-python/">http://www.jesshamrick.com/2011/05/18/an-introduction-to-classes-and-inheritance-in-python/</a> </p>
 
