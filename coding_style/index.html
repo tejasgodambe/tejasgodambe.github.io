@@ -1,0 +1,8 @@
+<ul>
+
+<b> Kaldi </b>
+<li> Kaldi defines a list of variables at the very top of their each bash recipe. These are the CONFIG variables. So, before every run, user just needs to worry about these variables at the top of the recipe, and not go through the entire recipe. </li>
+<li> Kaldi code is split into several STAGES. In case, the recipe crashed in between at a particular stage, the user can save himself the earlier stages which had run successfully, and run the recipe from the stage where it had earlier stopped. This saves user's time. 
+<li> There's an echo statement inside every stage to inform the user during run-time where is the recipe hanging around. </li>
+<li> A Kaldi recipe calls several other recipes. An echo statement like "echo $@: stage info" .. informs the user which sub-recipe is running, and at which stage. In case of any failure, it helps to directly reach the point of problem. </li>
+</ul>
