@@ -10,9 +10,19 @@ overriden by those called from the command-line. The script
 parse_options.sh enables this. </li>
 
 <li> Kaldi BASH recipes are split into several STAGES. In case a recipe 
-crashes in between at a particular stage, one can skip running stages
-which had completed successfully. This helps save a lot of time. </li> 
+crashes in between at a particular stage, in the next run, one can skip 
+running stages which had completed successfully, and start running the 
+recipe from the point where it had stopped. This helps save a lot of 
+time. </li> 
 
-<li> There's an echo statement inside every stage to inform the user during run-time where is the recipe hanging around. </li>
-<li> A Kaldi recipe calls several other recipes. An echo statement like "echo $@: stage info" .. informs the user which sub-recipe is running, and at which stage. In case of any failure, it helps to directly reach the point of problem. </li>
+<li> There's an echo statement inside every stage which has two benefits.
+First, while going through the code, it informs the user what processing
+that stage does. Second, during run-time we come to know which stage of
+the recipe is currently running. </li>
+
+<li> Typically, a Kaldi recipe calls several other recipes. 
+An echo statement (described above) of the form "echo $@: stage info"
+also helps the user know which sub-recipe is currently running, 
+and at which stage. In case of any failure, it helps us to directly 
+reach the point of problem. </li>
 </ul>
