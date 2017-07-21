@@ -22,7 +22,8 @@ the recipe is currently running. </li>
 
 <li> Typically, a Kaldi recipe calls several other recipes. 
 An echo statement (described above) of the form "echo $@: stage info"
-also helps the user know which sub-recipe is currently running, 
-and at which stage. In case of any failure, it helps us to directly 
-reach the point of problem. </li>
+also helps the user know which sub-recipe is currently running (as $@ 
+prints the name of the sub-recipe on terminal) and at which stage. 
+In case of any failure, it helps us to directly reach the point of 
+problem. </li>
 </ul>
