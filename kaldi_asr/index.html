@@ -1,7 +1,11 @@
-compile-questions data/lang/topo exp/tri2b/questions.int exp/tri2b/questions.qst
+compile-questions data/lang/topo exp/tri2b/questions.int exp/tri2b/questions.qst <br>
 <br>
-convert-ali exp/tri2a_ali/final.mdl exp/tri2b/1.mdl exp/tri2b/tree "ark:gunzip -c exp/tri2a_ali/ali.1.gz|" "ark:|gzip -c >exp/tri2b/ali.1.gz"
 
-cluster-phones exp/tri2b/treeacc data/lang/phones/sets.int exp/tri2b/questions.int 
+convert-ali exp/tri2a_ali/final.mdl exp/tri2b/1.mdl exp/tri2b/tree "ark:gunzip -c exp/tri2a_ali/ali.1.gz|" "ark:|gzip -c &gt; exp/tri2b/ali.1.gz" <br>
+<br>
 
-gmm-acc-stats-ali exp/tri2b/34.mdl "ark,s,cs:apply-cmvn --norm-means=false --utt2spk=ark:data/train/split10/6/utt2spk scp:data/train/split10/6/cmvn.scp scp:data/train/split10/6/feats.scp ark:- | splice-feats --left-context=3 --right-context=3 ark:- ark:- | transform-feats exp/tri2b/12.mat ark:- ark:- |" "ark,s,cs:gunzip -c exp/tri2b/ali.6.gz|" exp/tri2b/34.6.acc
+cluster-phones exp/tri2b/treeacc data/lang/phones/sets.int exp/tri2b/questions.int <br>
+<br>
+
+gmm-acc-stats-ali exp/tri2b/34.mdl "ark,s,cs:apply-cmvn --norm-means=false --utt2spk=ark:data/train/split10/6/utt2spk scp:data/train/split10/6/cmvn.scp scp:data/train/split10/6/feats.scp ark:- | splice-feats --left-context=3 --right-context=3 ark:- ark:- | transform-feats exp/tri2b/12.mat ark:- ark:- |" "ark,s,cs:gunzip -c exp/tri2b/ali.6.gz|" exp/tri2b/34.6.acc <br>
+<br>
