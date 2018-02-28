@@ -1,13 +1,17 @@
 <font size=5>
-compile-questions data/lang/topo exp/tri2b/questions.int exp/tri2b/questions.qst <br>
-<br>
+acc-tree-stats --ci-phones=1 exp/tri2a_ali/final.mdl "ark,s,cs:apply-cmvn --norm-means=false --utt2spk=ark:data/train/split10/1/utt2spk scp:data/train/split10/1/cmvn.scp scp:data/train/split10/1/feats.scp ark:- | splice-feats --left-context=3 --right-context=3 ark:- ark:- | transform-feats exp/tri2b/0.mat ark:- ark:- |" "ark:gunzip -c exp/tri2a_ali/ali.1.gz|" exp/tri2b/1.treeacc <br> <br>
 
-convert-ali exp/tri2a_ali/final.mdl exp/tri2b/1.mdl exp/tri2b/tree "ark:gunzip -c exp/tri2a_ali/ali.1.gz|" "ark:|gzip -c &gt; exp/tri2b/ali.1.gz" <br>
-<br>
+sum-tree-stats exp/tri2b/treeacc exp/tri2b/1.treeacc exp/tri2b/10.treeacc exp/tri2b/2.treeacc exp/tri2b/3.treeacc exp/tri2b/4.treeacc exp/tri2b/5.treeacc exp/tri2b/6.treeacc exp/tri2b/7.treeacc exp/tri2b/8.treeacc exp/tri2b/9.treeacc
 
-cluster-phones exp/tri2b/treeacc data/lang/phones/sets.int exp/tri2b/questions.int <br>
-<br>
+cluster-phones exp/tri2b/treeacc data/lang/phones/sets.int exp/tri2b/questions.int <br><br>
 
-gmm-acc-stats-ali exp/tri2b/34.mdl "ark,s,cs:apply-cmvn --norm-means=false --utt2spk=ark:data/train/split10/6/utt2spk scp:data/train/split10/6/cmvn.scp scp:data/train/split10/6/feats.scp ark:- | splice-feats --left-context=3 --right-context=3 ark:- ark:- | transform-feats exp/tri2b/12.mat ark:- ark:- |" "ark,s,cs:gunzip -c exp/tri2b/ali.6.gz|" exp/tri2b/34.6.acc <br>
-<br>
+build-tree --verbose=1 --max-leaves=1000 --cluster-thresh=-1 exp/tri2b/treeacc data/lang/phones/roots.int exp/tri2b/questions.qst data/lang/topo exp/tri2b/tree <br> <br>
+
+compile-questions data/lang/topo exp/tri2b/questions.int exp/tri2b/questions.qst <br> <br>
+
+convert-ali exp/tri2a_ali/final.mdl exp/tri2b/1.mdl exp/tri2b/tree "ark:gunzip -c exp/tri2a_ali/ali.1.gz|" "ark:|gzip -c &gt; exp/tri2b/ali.1.gz" <br> <br>
+
+gmm-acc-stats-ali exp/tri2b/34.mdl "ark,s,cs:apply-cmvn --norm-means=false --utt2spk=ark:data/train/split10/6/utt2spk scp:data/train/split10/6/cmvn.scp scp:data/train/split10/6/feats.scp ark:- | splice-feats --left-context=3 --right-context=3 ark:- ark:- | transform-feats exp/tri2b/12.mat ark:- ark:- |" "ark,s,cs:gunzip -c exp/tri2b/ali.6.gz|" exp/tri2b/34.6.acc <br> <br>
+
+gmm-est --write-occs=exp/tri2b/10.occs --mix-up=3880 --power=0.25 exp/tri2b/9.mdl "gmm-sum-accs - exp/tri2b/9.*.acc |" exp/tri2b/10.mdl <br> <br>
 </font>
